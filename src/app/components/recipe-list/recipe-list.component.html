@@ -1,0 +1,21 @@
+<!--The content below is only a placeholder and can be replaced.-->
+
+<h1 class="alert alert success">These are our Recipies</h1>
+<table style="border-spacing: 10px;">
+  <tr>
+    <!-- *ngFor, *ngIf, etc are structural directive of Angular 7 
+      because they edit the structure of the html DOM-->
+    <td style="margin: 10px" *ngFor="let recipe of recipes" class="panel panel-default" 
+        >
+      <div class="panel-heading">
+        <h3 class="panel-title">{{recipe.title}}</h3>
+      </div>
+      <div class="panel-body" style="float:right">
+        <img src="{{recipes.cover_photo ? recipes.cover_photo : '/assets/emptybowl.jpg'}}" 
+        style="width: 150px; height: 150px; margin: 5px" />
+      </div>
+      <p style="margin:10px">{{recipe.description}}</p>
+    </td>
+    <td style="margin: 10px"></td>
+  </tr>
+</table>

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Recipe } from './model/recipe';
 
 @Component({
   selector: 'rcb-app-root',
@@ -12,8 +11,5 @@ import { Recipe } from './model/recipe';
 })
 export class AppComponent {
   title = 'Recipe App';
-  recipe: Recipe;
-  constructor(){
-    this.recipe = new Recipe('Banana Bread', 'My Favorite Banana bread recipe',null,null,null);
-  }
+
 }
