@@ -2,7 +2,8 @@
 <div style="float:right;">
   <input type="button" value="Toggle Dark Background"   (click) = "toggleBGColor()"/>
 </div>
-<h1 class="{{useBgColor ? 'darkbg' : ''}}"> These are our Recipes</h1>
+<!-- <h1 class="{{useBgColor ? 'darkbg' : ''}}"> These are our Recipes</h1> -->
+<h1 [class.darkbg]="useBgColor"> These are our Recipes</h1>
 <app-recipe-summary *ngFor="let recipe of recipes" [recipe]="recipe" (zoomIn)="talkToOtherComponent(recipe)"></app-recipe-summary>
 
 <div style="clear: both"></div>
