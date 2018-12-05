@@ -7,5 +7,12 @@
           <img src="{{ recipe.cover_photo ? recipe.cover_photo : '/assets/emptybowl.jpg' }}" />
       </div>
       <p>{{ recipe.description }}</p>
+      <div style="float:left;font-weight: bold ;width: 140px" >Preparation time: </div>
+        <div>{{ recipe.prepTime }}</div>
+        
+      
+      <div style="float:left;font-weight: bold ;width: 140px"> Feeds this many:</div>  
+      
+      <div>{{ recipe.feedsThisMany }}</div>
       
   </div>
