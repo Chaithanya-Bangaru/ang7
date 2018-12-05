@@ -7,8 +7,10 @@ import { Recipe } from '../../model/recipe';
 })
 export class RecipeListComponent {
 
+  useBgColor: boolean;
   recipes: Recipe[];
   constructor() {
+    this.useBgColor = false;
     this.recipes = [new Recipe('Banana Bread', 'My Favorite Banana bread recipe!I had'
       + ' this once in starbucks in a Minneapolis trip and from that moment'
       + ' it has become my favorite.', null, null, null, 30, 4),
@@ -19,5 +21,9 @@ export class RecipeListComponent {
   }
   public talkToOtherComponent(recipe) {
     console.log(JSON.stringify(recipe, null, 2));
+  }
+
+  public toggleBGColor(){
+    this.useBgColor = !this.useBgColor;
   }
 }
