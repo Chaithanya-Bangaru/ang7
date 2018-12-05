@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Recipe } from 'src/app/model/recipe';
 
 
@@ -11,5 +11,13 @@ export class RecipeSummaryComponent  {
 
   @Input()
   recipe: Recipe
+
+  @Output()
+  zoomIn :  EventEmitter<Recipe> = new EventEmitter();
   constructor(){}
+
+  public zoomInClick (){
+    console.log('zoomInClicked');
+    this.zoomIn.emit(this.recipe);
+  }
 }

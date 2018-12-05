@@ -17,4 +17,8 @@ export class RecipeListComponent  {
     new Recipe('Mutton Haleem', 'Had this in a SACFO fellowship dinner and it tasted really good.'+
     ' Heard its made by Sahyad ',null,null,null,90,10)]
   }
+
+  public talkToOtherComponent(recipe){
+    console.log(JSON.stringify(recipe,null,2));
+  }
 }

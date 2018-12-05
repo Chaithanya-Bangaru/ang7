@@ -1,18 +1,20 @@
 <div class='recipe panel panel-default'>
   <div class="panel-heading">
-      <h3 class="panel-title">{{ recipe.title }}</h3>
+    <h3 class="panel-title">{{ recipe.title }}</h3>
   </div>
   <div class="panel-body">
-      <div class='cover-photo-holder'>
-          <img src="{{ recipe.cover_photo ? recipe.cover_photo : '/assets/emptybowl.jpg' }}" />
-      </div>
-      <p>{{ recipe.description }}</p>
-      <div style="float:left;font-weight: bold ;width: 140px" >Preparation time: </div>
-        <div>{{ recipe.prepTime }}</div>
-        
-      
-      <div style="float:left;font-weight: bold ;width: 140px"> Feeds this many:</div>  
-      
+    <div class='cover-photo-holder'>
+      <img src="{{ recipe.cover_photo ? recipe.cover_photo : '/assets/emptybowl.jpg' }}" />
+    </div>
+    <p>{{ recipe.description }}</p>
+    <div>
+      <div style="float:left;font-weight: bold ;width: 140px">Preparation time: </div>
+      <div>{{ recipe.prepTime }}</div>
+      <div style="float:left;font-weight: bold ;width: 140px"> Feeds this many:</div>
+
       <div>{{ recipe.feedsThisMany }}</div>
-      
+      <div style="float:left;font-size: 85%; cursor:pointer; padding: 25px" 
+      (click)="zoomInClick()">Zoom</div>
+    </div>
+
   </div>
